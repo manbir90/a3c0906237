@@ -62,7 +62,7 @@ app.post('/add-expense', async (req, res) => {
     request.input('amount', sql.Decimal(10, 2), amount);
     request.input('date', sql.Date, date);
     request.input('description', sql.VarChar, description);
-
+//
     await request.query(query);
     res.redirect('/');
   } catch (err) {
